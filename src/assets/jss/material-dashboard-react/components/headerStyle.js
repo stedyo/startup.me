@@ -20,13 +20,12 @@ const headerStyle = () => ({
     position: "relative",
     width: "100%",
     paddingTop: "10px",
-    zIndex: "-1!important",
+    zIndex: "1029",
     color: grayColor[7],
     borderRadius: "3px",
     padding: "10px 0",
     transition: "all 150ms ease 0s",
-    minHeight: "50px",
-   
+    minHeight: "50px"
   },
   container: {
     ...container,

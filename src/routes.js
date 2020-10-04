@@ -5,17 +5,19 @@ import BubbleChart from "@material-ui/icons/BubbleChart";
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import AppsIcon from '@material-ui/icons/Apps';
 import BuildIcon from '@material-ui/icons/Build';
-import HelpIcon from '@material-ui/icons/Help';
+import HelpIcon from '@material-ui/icons/ThumbUpAlt';
 import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 import FaceIcon from '@material-ui/icons/Face';
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
-import TableList from "views/TableList/TableList.js";
-import Typography from "views/Typography/Typography.js";
-import Icons from "views/Icons/Icons.js";
-import Maps from "views/Maps/Maps.js";
-
+import Knowledge from 'views/Dashboard/Knowledge.js'
+import Acceleration from 'views/Dashboard/Acceleration.js'
+import Clients from 'views/Dashboard/Clients.js'
+import Management from 'views/Dashboard/Management.js'
+import Marketing from 'views/Dashboard/Marketing.js'
+import MVP from 'views/Dashboard/MVP.js'
+import Partnership from 'views/Dashboard/Partnership.js'
+import Services from 'views/Dashboard/Services.js'
 
 
 
@@ -35,7 +37,7 @@ const dashboardRoutes = [
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Conhecimento": "Educate Yourself",
     rtlName: "education",
     icon: LibraryBooks,
-    component: UserProfile,
+    component: Knowledge,
     layout: "/section"
   },
   {
@@ -43,7 +45,7 @@ const dashboardRoutes = [
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Encontre Parceiros": "Co-founders & Mentors",
     rtlName: "partnership",
     icon: PeopleAltIcon,
-    component: TableList,
+    component: Partnership,
     layout: "/section"
   },
  
@@ -52,7 +54,7 @@ const dashboardRoutes = [
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Prototipe": "Build the MVP",
     rtlName: "mvp",
     icon: BuildIcon,
-    component: Typography,
+    component: MVP,
     layout: "/section"
   },
   {
@@ -60,7 +62,7 @@ const dashboardRoutes = [
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Produtividade": "Management Tools",
     rtlName: "management",
     icon: AppsIcon,
-    component: Typography,
+    component: Management,
     layout: "/section"
   },
   {
@@ -68,7 +70,7 @@ const dashboardRoutes = [
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Serviços": "Helpful Services",
     rtlName: "services",
     icon: HelpIcon,
-    component: Maps,
+    component: Services,
     layout: "/section"
   },
 
@@ -77,7 +79,7 @@ const dashboardRoutes = [
     name: "Marketing",
     rtlName: "marketing",
     icon: BubbleChart,
-    component: Icons,
+    component: Marketing,
     layout: "/section"
   },
   {
@@ -85,15 +87,15 @@ const dashboardRoutes = [
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Gerencie Clientes": "Manage Clients",
     rtlName: "clients",
     icon: FaceIcon,
-    component: Maps,
+    component: Clients,
     layout: "/section"
   },
   {
-    path: "/accelerationprogram",
+    path: "/acceleration",
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Aceleração": "Acceleration Programs",
-    rtlName: "acceleratprogram",
+    rtlName: "acceleration",
     icon: DirectionsRunIcon,
-    component: Maps,
+    component: Acceleration,
     layout: "/section"
   },
 

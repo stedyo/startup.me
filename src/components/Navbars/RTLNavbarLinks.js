@@ -38,7 +38,9 @@ export default function RTLNavbarLinks() {
   };
 
   return (
+    
     <div>
+      
       <div className={classes.searchWrapper}>
         <CustomInput
           formControlProps={{
