@@ -187,9 +187,9 @@ export default function Admin({ ...rest }) {
           {...rest}
         />
         
-        <div className={classes.ads}>
+        {/*<div className={classes.ads}>
          Espaço reservado para google ads
-        </div>
+        </div>*/}
 
         <Paper className={classesBody.form}>
           {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
@@ -242,6 +242,26 @@ export default function Admin({ ...rest }) {
           <div className={classes.map}>{switchRoutes}</div>
           
         )}
+
+        {detectBrowserLanguage().toLowerCase() === "pt-br" &&
+            <div style={{fontSize: "12px", width: "93%", textAlign: "left", margin: "0 auto", marginBottom: "20px"} }>
+              Aviso: O startuphacks.me tem como objetivo compilar plataformas, ferramentas e serviços de mercado que facilitem a vida dos empreendedores.
+              <br />
+              Não temos propriedade sobre qualquer empresa que indicamos.
+            </div>
+        }
+
+        {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
+          <div style={{fontSize: "12px", width: "93%", textAlign: "left", margin: "0 auto", marginBottom: "20px"} }>
+              Disclaimer: Startuphacks.me aims to compile platforms, tools and market services to help entrepreneurs to thrive.
+              <br />
+              We have no ownership over any company we refer.
+          </div>
+        }
+
+
+
+
         <FixedPlugin
           handleImageClick={handleImageClick}
           handleColorClick={handleColorClick}

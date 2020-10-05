@@ -22,13 +22,29 @@ const bodyStyle = () => ({
   categoryWrapper:{
     width: "100%",
     margin: "0 auto",
-    padding: "10px",
     height: 'auto',
   },
-  tinyLink:{
-    margin: '5px',
-    width: '31%',
-    display: 'inline-block'
+  card:{
+    margin: '7px',
+    display: 'inline-block',
+    borderRadius: '2px',
+    width: "31%",
+  },
+
+  '@media screen and (min-width: 450px)': {
+    card: {
+      width: "100%",
+    }
+  },
+  '@media screen and (min-width: 600px)': {
+    card: {
+      width: "47%",
+    }
+  },
+  '@media screen and (min-width: 1024px)': {
+    card: {
+      width: "31%",
+    }
   },
   gridMail:{
     marginTop: '6px',

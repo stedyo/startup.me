@@ -34,16 +34,15 @@ Hacks.addNewSubscriber = function(newSubscriber, callback){
     });
 }
 
-Hacks.getRecommendations = function(category, callback){
-
-    console.log(category)
+Hacks.getRecommendations = function(data, callback){
 
     SQLpool.getConnection()
     .then(conn => {
         conn.query(`select * 
                     from platforms 
-                    where category = "${category.toLowerCase().trim()}"
-                    order by created_at desc`)          
+                    where category = "${data.category.toLowerCase().trim()}"
+                    and language = "${data.language.toLowerCase().trim()}"
+                    order by priority asc`)          
         .then(rows => {
             
             if(rows.length > 0 ){

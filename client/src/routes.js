@@ -84,7 +84,7 @@ const dashboardRoutes = [
   },
   {
     path: "/clients",
-    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Gerencie Clientes": "Manage Clients",
+    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Gerencie Vendas": "Manage Sales",
     rtlName: "clients",
     icon: FaceIcon,
     component: Clients,
