@@ -19,6 +19,17 @@ const bodyStyle = () => ({
     width: "90%",
     marginTop: "15px"
   },
+  categoryWrapper:{
+    width: "100%",
+    margin: "0 auto",
+    padding: "10px",
+    height: 'auto',
+  },
+  tinyLink:{
+    margin: '5px',
+    width: '31%',
+    display: 'inline-block'
+  },
   gridMail:{
     marginTop: '6px',
   },  

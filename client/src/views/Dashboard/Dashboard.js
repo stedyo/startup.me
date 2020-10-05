@@ -19,7 +19,7 @@ export default function Dashboard() {
     <div>
       
       {detectBrowserLanguage().toLowerCase() === "pt-br" &&
-        <Paper elevation={3} style={{padding: '15px'}}>
+        <Paper elevation={3} style={{padding: '15px', width: '95%', margin: '0 auto'}}>
           Seja muito bem vindx ao <strong>startuphacks.me </strong>
           <br />
           Nós reunimos todas as plataformas, ferramentas e serviços mais utilizados pelos startupeiros no mundo inteiro.
