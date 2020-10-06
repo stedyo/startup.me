@@ -85,7 +85,7 @@ return (
           <CardMedia
             component="img"
             alt="s"
-            height="140"
+            height="170"
             image={`${process.env.PUBLIC_URL}/filesystem/icons/${rec.id}.png`}
             title=""
             onError={handleImageError}  
