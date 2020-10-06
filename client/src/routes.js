@@ -58,6 +58,14 @@ const dashboardRoutes = [
     layout: "/section"
   },
   {
+    path: "/clients",
+    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Gerencie Vendas": "Manage Sales",
+    rtlName: "clients",
+    icon: FaceIcon,
+    component: Clients,
+    layout: "/section"
+  },
+  {
     path: "/management",
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Produtividade": "Management Tools",
     rtlName: "management",
@@ -82,14 +90,7 @@ const dashboardRoutes = [
     component: Marketing,
     layout: "/section"
   },
-  {
-    path: "/clients",
-    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Gerencie Vendas": "Manage Sales",
-    rtlName: "clients",
-    icon: FaceIcon,
-    component: Clients,
-    layout: "/section"
-  },
+
   {
     path: "/acceleration",
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Aceleração": "Acceleration Programs",

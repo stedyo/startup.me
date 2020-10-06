@@ -95,20 +95,30 @@ return (
           />
             
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2" style={{textAlign: 'center', fontSize: '20px'}}>
+              <Typography gutterBottom variant="h5" component="h2" style={{textAlign: 'left', fontSize: '20px'}}>
                 {rec.title}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p" style={{height: '70px', textAlign: 'center'}}>
+              <Typography variant="body2" color="textSecondary" component="p" style={{height: '70px', textAlign: 'left'}}>
                 {rec.description}
               </Typography>
             </CardContent>
           </CardActionArea>
+          {detectBrowserLanguage().toLowerCase() === "pt-br" &&
           <CardActions>
               <IconButton aria-label="add to favorites">
                 <PublicIcon />
               </IconButton>
-              Infos
+              Acesse o site
           </CardActions>
+          }
+          {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
+          <CardActions>
+              <IconButton aria-label="add to favorites">
+                <PublicIcon />
+              </IconButton>
+              Visit the website
+          </CardActions>
+          }
           
         </Card>
       </a>
