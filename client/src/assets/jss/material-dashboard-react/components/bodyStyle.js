@@ -19,6 +19,11 @@ const bodyStyle = () => ({
     width: "90%",
     marginTop: "15px"
   },
+  select:{
+    marginBottom: '20px',
+    marginLeft: '5px',
+    
+  },
   categoryWrapper:{
     width: "100%",
     margin: "0 auto",

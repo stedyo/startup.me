@@ -12,7 +12,7 @@ import FaceIcon from '@material-ui/icons/Face';
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import Knowledge from 'views/Dashboard/Knowledge.js'
 import Acceleration from 'views/Dashboard/Acceleration.js'
-import Clients from 'views/Dashboard/Clients.js'
+import Clients from 'views/Dashboard/Sales.js'
 import Management from 'views/Dashboard/Management.js'
 import Marketing from 'views/Dashboard/Marketing.js'
 import MVP from 'views/Dashboard/MVP.js'

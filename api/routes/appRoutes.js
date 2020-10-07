@@ -12,7 +12,12 @@ module.exports = function(app) {
 
   app.route('/api/hacks/getRecommends')
     .post(hackEvents.get_recommendations);
-      
+
+  app.route('/api/hacks/getRecommendsbyTag')
+    .post(hackEvents.get_recommendations_by_tag);
+     
+  app.route('/api/hacks/getTagsbyCategory')
+    .post(hackEvents.get_tags_by_category);
      
 
 };

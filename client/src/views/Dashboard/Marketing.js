@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import Select from 'react-select'
 import detectBrowserLanguage from 'detect-browser-language'
 import PublicIcon from '@material-ui/icons/Public';
 import IconButton from '@material-ui/core/IconButton';
@@ -17,7 +18,25 @@ import Axios from "axios"
 import 'react-vertical-timeline-component/style.min.css';
 import styles from "assets/jss/material-dashboard-react/components/bodyStyle.js";
 
-
+const rsStyles = {
+  control: base => ({
+    ...base,
+    fontSize: "12px",
+    fontFamily: "Open Sans",
+    color: "#333",
+    textTransform: "uppercase",
+    width: "50%",
+    
+  }),
+  menu: base => ({
+      ...base,
+      fontSize: "12px",
+      letterSpacing: "0.08em",
+      zIndex: "999999999 !important",
+      textTransform: "uppercase",
+      width: "50%",
+  })
+};
 
 const handleImageError = (e) => {
   e.target.onerror = null;
@@ -32,15 +51,42 @@ const useStyles = makeStyles(styles)
 export default function Marketing() {
 
   const classes = useStyles();
+  const [allTags, setAllTags] = React.useState([])
   const [recommends, setRecommendations] = React.useState([]);
   
  
-  const [count, setCount] = React.useState(3)
+  const [count, setCount] = React.useState(6)
 
   const _increaseCount = () => {
-    setCount(count + 3)
+    setCount(count + 6)
   }
- 
+
+
+
+
+  const handleChangeTags = selectedOption => {
+   
+
+    if(selectedOption.value !== null && selectedOption.value !== ""){
+      const params = {
+        tag: selectedOption.value,
+        category: 'marketing'
+      }
+
+      Axios.post(`/api/hacks/getRecommendsbyTag`,  params)
+      .then(newRecom => {
+          
+          if(newRecom.data && newRecom.data.length > 0){
+            setRecommendations(newRecom.data)
+          }
+  
+      }).catch(err => {
+        console.log(err)
+      })
+    }
+  }
+
+    
     
 
 
@@ -60,22 +106,50 @@ export default function Marketing() {
     }
     
 
+    Axios.post(`/api/hacks/getTagsbyCategory`,  params)
+    .then(tags => {
+        
+        if(tags.data && tags.data.length > 0){
+          var allTags = [] 
+          Object.keys(tags.data).forEach(function(key) {
+            const tagName = tags.data[key].tag
+            var spTag = tagName.toString().split("_")
+            allTags.push({value: tagName, label: spTag.join(" ")})
+          })
+          setAllTags(allTags)
+        }
+
+    }).catch(err => {
+      console.log(err)
+    })
+
     Axios.post(`/api/hacks/getRecommends`,  params)
     .then(res => {
         setRecommendations(res.data)
-        console.log(res.data)
     }).catch(err => {
       console.log(err)
     })
     
   }, [])
 
-  
-
-
+ 
 return (
     
     <div className={classes.categoryWrapper}>
+
+        <div className={classes.select}>
+        {detectBrowserLanguage().toLowerCase() === "pt-br" &&
+        <span style={{margin: '2px', fontSize: '14px'}}>Filtre as plataformas por categoria: </span>
+        }
+        {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
+        <span style={{margin: '2px', fontSize: '14px'}}>Search by category: </span>
+        }
+        <Select
+            options={allTags}
+            onChange={handleChangeTags}
+            styles={rsStyles} 
+        />
+        </div>
       
      {recommends && recommends.length > 0 && recommends.slice(0, count).map((rec, index) => (
         
@@ -85,7 +159,7 @@ return (
           <CardMedia
             component="img"
             alt="s"
-            height="170"
+            height="150"
             image={`${process.env.PUBLIC_URL}/filesystem/icons/${rec.id}.png`}
             title=""
             onError={handleImageError}  
@@ -138,7 +212,7 @@ return (
       {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
       <Button
       variant="contained"
-      color="default"
+      color="primary"
       startIcon={<Cached />}
       onClick={_increaseCount}
       style={{marginLeft: '10px'}}
