@@ -82,7 +82,7 @@ export default function Admin({ ...rest }) {
 
   const validateAndSubmit = (event, errors, values) => {
     var validator = require("email-validator");
-    var valEmail = validator.validate(email)
+    var valEmail = validator.validate(email.trim())
     if(!valEmail){
       if(detectBrowserLanguage().toLowerCase() !== "pt-br"){
         handleFormChange('Please insert a valid e-mail :(')
