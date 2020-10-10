@@ -36,7 +36,7 @@ const bodyStyle = () => ({
     width: "31%",
   },
 
-  '@media screen and (min-width: 450px)': {
+  '@media screen and (min-width: 250px)': {
     card: {
       width: "100%",
     }
