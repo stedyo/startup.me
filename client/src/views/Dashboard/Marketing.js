@@ -18,6 +18,7 @@ import Axios from "axios"
 import 'react-vertical-timeline-component/style.min.css';
 import styles from "assets/jss/material-dashboard-react/components/bodyStyle.js";
 
+
 const rsStyles = {
   control: base => ({
     ...base,
@@ -25,7 +26,15 @@ const rsStyles = {
     fontFamily: "Open Sans",
     color: "#333",
     textTransform: "uppercase",
-    width: "50%",
+    width: "40%",
+    "@media only screen and (max-width: 1200px)": {
+      ...styles["@media only screen and (max-width: 1200px)"],
+      width: "60%",
+    },
+    "@media only screen and (max-width: 600px)": {
+      ...styles["@media only screen and (max-width: 600px)"],
+      width: "100%",
+    }
     
   }),
   menu: base => ({
@@ -34,7 +43,15 @@ const rsStyles = {
       letterSpacing: "0.08em",
       zIndex: "999999999 !important",
       textTransform: "uppercase",
-      width: "50%",
+      width: "40%",
+      "@media only screen and (max-width: 1200px)": {
+        ...styles["@media only screen and (max-width: 1200px)"],
+        width: "60%",
+      },
+      "@media only screen and (max-width: 600px)": {
+        ...styles["@media only screen and (max-width: 600px)"],
+        width: "100%",
+      }
   })
 };
 
