@@ -84,7 +84,7 @@ const dashboardRoutes = [
 
   {
     path: "/marketing",
-    name: "Marketing",
+    name: "Digital Marketing",
     rtlName: "marketing",
     icon: BubbleChart,
     component: Marketing,
