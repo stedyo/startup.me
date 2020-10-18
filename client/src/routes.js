@@ -41,20 +41,11 @@ const dashboardRoutes = [
     layout: "/section"
   },
   {
-    path: "/partnership",
-    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Encontre Parceiros": "Co-founders & Mentors",
-    rtlName: "partnership",
-    icon: PeopleAltIcon,
-    component: Partnership,
-    layout: "/section"
-  },
- 
-  {
-    path: "/buildmvp",
-    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Prototipe": "Build the MVP",
-    rtlName: "mvp",
-    icon: BuildIcon,
-    component: MVP,
+    path: "/marketing",
+    name: "Digital Marketing",
+    rtlName: "marketing",
+    icon: BubbleChart,
+    component: Marketing,
     layout: "/section"
   },
   {
@@ -63,6 +54,14 @@ const dashboardRoutes = [
     rtlName: "clients",
     icon: FaceIcon,
     component: Clients,
+    layout: "/section"
+  },
+  {
+    path: "/buildmvp",
+    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Prototipe": "Build the MVP",
+    rtlName: "mvp",
+    icon: BuildIcon,
+    component: MVP,
     layout: "/section"
   },
   {
@@ -81,16 +80,14 @@ const dashboardRoutes = [
     component: Services,
     layout: "/section"
   },
-
   {
-    path: "/marketing",
-    name: "Digital Marketing",
-    rtlName: "marketing",
-    icon: BubbleChart,
-    component: Marketing,
+    path: "/partnership",
+    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Encontre Parceiros": "Co-founders & Mentors",
+    rtlName: "partnership",
+    icon: PeopleAltIcon,
+    component: Partnership,
     layout: "/section"
   },
-
   {
     path: "/acceleration",
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Aceleração": "Acceleration Programs",

@@ -193,7 +193,7 @@ export default function Admin({ ...rest }) {
 
         <Paper className={classesBody.form}>
           {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
-            <span>  Do you wanna receive the newest platforms to boost your startup in your e-mail?</span>
+            <span>  Do you want to receive in your e-mail the newest platforms to boost startups?</span>
           }
 
           {detectBrowserLanguage().toLowerCase() === "pt-br" &&

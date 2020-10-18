@@ -73,34 +73,66 @@ export default function Dashboard() {
         </a>
        </VerticalTimelineElement>
 
-        {/* PARTNERSHIP */}
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentArrowStyle={{ borderRight: '7px solid  #F71735' }}
-          iconStyle={{ background: '#F71735', color: '#fff' }}
-          icon={<PeopleAltIcon />}
+
+          {/* MARKETING */}
+          <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentArrowStyle={{ borderRight: '7px solid  #C2F970' }}
+          iconStyle={{ background: '#C2F970', color: '#fff' }}
+          icon={<BubbleChart />}
         >
-        <a href="/section/partnership" style={{color: 'inherit'}}>
+
+        <a href="/section/marketing" style={{color: 'inherit'}}>
         {detectBrowserLanguage().toLowerCase() === "pt-br" &&
           <div>
-            <h3 className="vertical-timeline-element-title">Encontre Parceiros</h3>
+            <h3 className="vertical-timeline-element-title">Marketing</h3>
             <p>
-              Startups com co-fundadores e mentores são mais propensos ao sucesso. Encontre plataformas de conexão nesta seção.
+            Estabeleça a marca, alcance o público alvo, fidelize os usuários, cresça seu tráfego, gerencie redes sociais.
             </p>
           </div>
         }
 
         {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
           <div>
-            <h3 className="vertical-timeline-element-title">Co-founders and Mentors</h3>
+            <h3 className="vertical-timeline-element-title">Marketing</h3>
             <p>
-            Startups with co-founders and mentors are more likely to succeed. Find connection platforms in this section.
+            Establish the brand, reach the target audience, retain users, grow your traffic, manage social networks.
             </p>
           </div>
         }
         </a>
-
+          
         </VerticalTimelineElement>
+
+        {/* MANAGE CLIENTS */}
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          contentArrowStyle={{ borderRight: '7px solid  #119DA4' }}
+          iconStyle={{ background: '#119DA4', color: '#fff' }}
+          icon={<FaceIcon />}
+        >
+        <a href="/section/clients" style={{color: 'inherit'}}>
+        {detectBrowserLanguage().toLowerCase() === "pt-br" &&
+          <div>
+            <h3 className="vertical-timeline-element-title">Vendas</h3>
+            <p>
+            Gerencie túnel de conversão de vendas e os processos de experiência do cliente.
+            </p>
+          </div>
+        }
+
+        {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
+          <div>
+            <h3 className="vertical-timeline-element-title">Sales</h3>
+            <p>
+            Manage sales conversion funnel and customer experience processes.
+            </p>
+          </div>
+        }
+        </a>
+        </VerticalTimelineElement>
+
+
 
         {/* BUILD A MVP */}
         <VerticalTimelineElement
@@ -115,8 +147,8 @@ export default function Dashboard() {
           <div>
             <h3 className="vertical-timeline-element-title">Prototipe</h3>
             <p>
-              Comece a construir protótipos do seu produto ou serviço e evolua para um MVP completo. 
-              Avalie a tração do seu usuário final.
+              Comece a construir protótipos do seu produto e evolua para um MVP completo. 
+              Avalie a aceitação do seu usuário final e mostre aos seus investidores.
             </p>
           </div>
         }
@@ -195,65 +227,37 @@ export default function Dashboard() {
         </VerticalTimelineElement>
 
 
-        {/* MARKETING */}
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          contentArrowStyle={{ borderRight: '7px solid  #C2F970' }}
-          iconStyle={{ background: '#C2F970', color: '#fff' }}
-          icon={<BubbleChart />}
-        >
 
-        <a href="/section/marketing" style={{color: 'inherit'}}>
+        {/* PARTNERSHIP */}
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentArrowStyle={{ borderRight: '7px solid  #F71735' }}
+          iconStyle={{ background: '#F71735', color: '#fff' }}
+          icon={<PeopleAltIcon />}
+        >
+        <a href="/section/partnership" style={{color: 'inherit'}}>
         {detectBrowserLanguage().toLowerCase() === "pt-br" &&
           <div>
-            <h3 className="vertical-timeline-element-title">Marketing</h3>
+            <h3 className="vertical-timeline-element-title">Encontre Parceiros</h3>
             <p>
-            Estabeleça a marca, alcance o público alvo, fidelize os usuários, cresça seu tráfego, gerencie redes sociais.
+              Startups com co-fundadores e mentores são mais propensos ao sucesso. Encontre plataformas de conexão nesta seção.
             </p>
           </div>
         }
 
         {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
           <div>
-            <h3 className="vertical-timeline-element-title">Marketing</h3>
+            <h3 className="vertical-timeline-element-title">Co-founders and Mentors</h3>
             <p>
-            Establish the brand, reach the target audience, retain users, grow your traffic, manage social networks.
+            Startups with co-founders and mentors are more likely to succeed. Find connection platforms in this section.
             </p>
           </div>
         }
         </a>
-          
+
         </VerticalTimelineElement>
 
-        {/* MANAGE CLIENTS */}
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          contentArrowStyle={{ borderRight: '7px solid  #119DA4' }}
-          iconStyle={{ background: '#119DA4', color: '#fff' }}
-          icon={<FaceIcon />}
-        >
-        <a href="/section/clients" style={{color: 'inherit'}}>
-        {detectBrowserLanguage().toLowerCase() === "pt-br" &&
-          <div>
-            <h3 className="vertical-timeline-element-title">Gerencie Clientes</h3>
-            <p>
-            Gerencie túnel de conversão de vendas e os processos de experiência do cliente.
-            </p>
-          </div>
-        }
-
-        {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
-          <div>
-            <h3 className="vertical-timeline-element-title">Manage Clients</h3>
-            <p>
-            Manage sales conversion funnel and customer experience processes.
-            </p>
-          </div>
-        }
-        </a>
-        </VerticalTimelineElement>
-
-
+      
         {/* ACCELERATION PROGRAMS */}
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
