@@ -73,6 +73,36 @@ export default function Dashboard() {
         </a>
        </VerticalTimelineElement>
 
+{/* PARTNERSHIP */}
+<VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentArrowStyle={{ borderRight: '7px solid  #F71735' }}
+          iconStyle={{ background: '#F71735', color: '#fff' }}
+          icon={<PeopleAltIcon />}
+        >
+        <a href="/section/businessplan" style={{color: 'inherit'}}>
+        {detectBrowserLanguage().toLowerCase() === "pt-br" &&
+          <div>
+            <h3 className="vertical-timeline-element-title">Plano de Negócios</h3>
+            <p>
+              Execute pesquisas de mercado, entenda como precificar, defina sua estratégia de crescimento, 0junte-se à comunidades de empreendedores.
+            </p>
+          </div>
+        }
+
+        {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
+          <div>
+            <h3 className="vertical-timeline-element-title">Business Plan</h3>
+            <p>
+            Perform market research, understand how to price, define your growth strategy, join entrepreneur communities.
+            </p>
+          </div>
+        }
+        </a>
+
+        </VerticalTimelineElement>
+
+
 
           {/* MARKETING */}
           <VerticalTimelineElement
@@ -228,34 +258,7 @@ export default function Dashboard() {
 
 
 
-        {/* PARTNERSHIP */}
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentArrowStyle={{ borderRight: '7px solid  #F71735' }}
-          iconStyle={{ background: '#F71735', color: '#fff' }}
-          icon={<PeopleAltIcon />}
-        >
-        <a href="/section/partnership" style={{color: 'inherit'}}>
-        {detectBrowserLanguage().toLowerCase() === "pt-br" &&
-          <div>
-            <h3 className="vertical-timeline-element-title">Encontre Parceiros</h3>
-            <p>
-              Startups com co-fundadores e mentores são mais propensos ao sucesso. Encontre plataformas de conexão nesta seção.
-            </p>
-          </div>
-        }
-
-        {detectBrowserLanguage().toLowerCase() !== "pt-br" &&
-          <div>
-            <h3 className="vertical-timeline-element-title">Co-founders and Mentors</h3>
-            <p>
-            Startups with co-founders and mentors are more likely to succeed. Find connection platforms in this section.
-            </p>
-          </div>
-        }
-        </a>
-
-        </VerticalTimelineElement>
+        
 
       
         {/* ACCELERATION PROGRAMS */}

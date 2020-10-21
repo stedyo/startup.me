@@ -41,6 +41,14 @@ const dashboardRoutes = [
     layout: "/section"
   },
   {
+    path: "/businessplan",
+    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Plano de Negócio": "Business Plan",
+    rtlName: "businessplan",
+    icon: PeopleAltIcon,
+    component: BusinessPlan,
+    layout: "/section"
+  },
+  {
     path: "/marketing",
     name: "Digital Marketing",
     rtlName: "marketing",
@@ -80,14 +88,7 @@ const dashboardRoutes = [
     component: Services,
     layout: "/section"
   },
-  {
-    path: "/businessplan",
-    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Plano de Negócio": "Business Plan",
-    rtlName: "businessplan",
-    icon: PeopleAltIcon,
-    component: BusinessPlan,
-    layout: "/section"
-  },
+
   {
     path: "/acceleration",
     name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Aceleração": "Acceleration Programs",
