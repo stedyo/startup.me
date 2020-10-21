@@ -65,7 +65,7 @@ const useStyles = makeStyles(styles)
 
 
 
-export default function Partnership() {
+export default function BusinessPlan() {
 
   const classes = useStyles();
   const [allTags, setAllTags] = React.useState([])
@@ -87,7 +87,7 @@ export default function Partnership() {
     if(selectedOption.value !== null && selectedOption.value !== ""){
       const params = {
         tag: selectedOption.value,
-        category: 'partnership'
+        category: 'businessplan'
       }
 
       Axios.post(`/api/hacks/getRecommendsbyTag`,  params)
@@ -112,12 +112,12 @@ export default function Partnership() {
     var params = {}
     if(detectBrowserLanguage().toLowerCase() === "pt-br"){
       params = {
-        category: 'partnership',
+        category: 'businessplan',
         language: 'pt'
       }
     } else {
       params = {
-        category: 'partnership',
+        category: 'businessplan',
         language: 'en'
       }
     }

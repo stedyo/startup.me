@@ -16,7 +16,7 @@ import Clients from 'views/Dashboard/Sales.js'
 import Management from 'views/Dashboard/Management.js'
 import Marketing from 'views/Dashboard/Marketing.js'
 import MVP from 'views/Dashboard/MVP.js'
-import Partnership from 'views/Dashboard/Partnership.js'
+import BusinessPlan from 'views/Dashboard/BusinessPlan.js'
 import Services from 'views/Dashboard/Services.js'
 
 
@@ -81,11 +81,11 @@ const dashboardRoutes = [
     layout: "/section"
   },
   {
-    path: "/partnership",
-    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Encontre Parceiros": "Co-founders & Mentors",
-    rtlName: "partnership",
+    path: "/businessplan",
+    name: (detectBrowserLanguage().toLowerCase() === "pt-br") ? "Plano de Negócio": "Business Plan",
+    rtlName: "businessplan",
     icon: PeopleAltIcon,
-    component: Partnership,
+    component: BusinessPlan,
     layout: "/section"
   },
   {
