@@ -85,7 +85,7 @@ export default function Dashboard() {
           <div>
             <h3 className="vertical-timeline-element-title">Plano de Negócios</h3>
             <p>
-              Execute pesquisas de mercado, entenda como precificar, defina sua estratégia de crescimento, 0junte-se à comunidades de empreendedores.
+              Execute pesquisas de mercado, entenda como precificar, defina sua estratégia de crescimento, junte-se à comunidades de empreendedores.
             </p>
           </div>
         }
